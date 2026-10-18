@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b16">
+  <meta name="description" content="Discover, search, and copy creative AI prompts for images, stories, gaming, sports, and technology.">
+  <title>PromptVerse AI — Find your next idea</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="PromptVerse AI home"><span class="brand-mark">✳</span><span>PromptVerse<span class="brand-ai"> AI</span></span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#explore">Explore</a><a href="#categories">Categories</a><a href="#submit">Submit a prompt</a>
+    </nav>
+    <a class="top-cta" href="#explore">Explore prompts <span>↗</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> THE CREATIVE PROMPT LIBRARY</div>
+        <h1>Your next big idea<br>starts <span class="gradient-text">with a prompt.</span></h1>
+        <p class="hero-subtitle">Discover useful prompts for AI art, stories, games, sports, and technology. Copy an idea, remix it, make it yours.</p>
+        <div class="hero-actions"><a class="button primary" href="#explore">Explore the library <span>↘</span></a><a class="button secondary" href="#submit">Share a prompt</a></div>
+        <div class="hero-proof"><div class="avatar-stack"><span>✦</span><span>◈</span><span>✳</span></div><span><strong id="promptCount">12 creative prompts</strong><br><small>A growing library of ideas</small></span></div>
+      </div>
+      <div class="hero-art" aria-label="Decorative futuristic prompt card illustration">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="planet planet-back"></div><div class="planet planet-main"></div><div class="planet planet-small"></div>
+        <div class="floating-chip chip-top">✦ IMAGINE MORE</div>
+        <div class="floating-chip chip-bottom"><span class="chip-dot"></span> IDEA TO CREATION</div>
+        <div class="mini-window"><div class="window-dots"><i></i><i></i><i></i></div><div class="window-line long"></div><div class="window-line"></div><div class="window-line short"></div><div class="window-button">GENERATE IDEA ↗</div></div>
+      </div>
+      <div class="hero-bottom"><span>MADE FOR CURIOUS MINDS</span><span>IMAGINE <b>·</b> CREATE <b>·</b> SHARE</span></div>
+    </section>
+    <section class="explore section-wrap" id="explore">
+      <div class="section-heading"><div><div class="eyebrow">YOUR IDEA STARTS HERE</div><h2>Explore the <span class="gradient-text">promptverse.</span></h2><p>Find a spark. Copy a prompt. Create something unexpected.</p></div><div class="result-count" id="resultCount">12 prompts found</div></div>
+      <div class="search-row">
+        <label class="search-box"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Search prompts, topics, or keywords..." autocomplete="off"><kbd>SEARCH</kbd></label>
+        <select id="sortSelect" aria-label="Sort prompts"><option value="featured">Featured</option><option value="az">Title A–Z</option></select>
+      </div>
+      <div class="category-row" id="categories" aria-label="Filter by category">
+        <button class="category active" data-category="All">✳ <span>All prompts</span></button>
+        <button class="category" data-category="Images">◈ <span>AI Images</span></button>
+        <button class="category" data-category="Stories">▤ <span>Stories</span></button>
+        <button class="category" data-category="Gaming">⌘ <span>Gaming</span></button>
+        <button class="category" data-category="Sports">⚽ <span>Sports</span></button>
+        <button class="category" data-category="Technology">⌬ <span>Technology</span></button>
+      </div>
+      <div class="prompt-grid" id="promptGrid" aria-live="polite"></div>
+      <div class="empty-state hidden" id="emptyState"><div>⌕</div><h3>No prompts found</h3><p>Try another search or choose a different category.</p><button class="button secondary" id="resetFilters">Reset filters</button></div>
+      <div class="load-more-wrap"><button class="button secondary" id="showMore">Show more prompts <span>↓</span></button></div>
+    </section>
+    <section class="submit-section section-wrap" id="submit">
+      <div class="submit-panel">
+        <div class="submit-copy"><div class="eyebrow">THE COMMUNITY BUILDS IT</div><h2>Got a prompt<br>worth <span class="gradient-text">sharing?</span></h2><p>Help someone turn a blank page into their next great idea. Add a prompt to this demo library.</p><div class="submit-note">✦ Your submission stays in this browser demo. A live public submission system needs a backend.</div></div>
+        <form id="promptForm" class="submit-form">
+          <label for="promptTitle">Prompt title</label><input id="promptTitle" name="title" maxlength="70" placeholder="e.g. A city above the clouds" required>
+          <div class="form-row"><div><label for="promptCategory">Category</label><select id="promptCategory" name="category"><option>Images</option><option>Stories</option><option>Gaming</option><option>Sports</option><option>Technology</option></select></div><div><label for="promptTag">Short tag</label><input id="promptTag" name="tag" maxlength="24" placeholder="e.g. Sci-fi"></div></div>
+          <label for="promptText">Your prompt</label><textarea id="promptText" name="prompt" rows="5" maxlength="1200" placeholder="Describe the scene, style, details, and mood..." required></textarea>
+          <button class="button primary submit-button" type="submit">Add to this demo <span>↗</span></button><p class="form-feedback" id="formFeedback" role="status"></p>
+        </form>
+      </div>
+    </section>
+    <section class="bottom-cta section-wrap"><div><div class="eyebrow">STAY CURIOUS</div><h2>One good prompt can open <span class="gradient-text">a thousand doors.</span></h2></div><a class="button primary" href="#explore">Find your next idea ↗</a></section>
+  </main>
+  <footer class="footer"><a class="brand" href="#"><span class="brand-mark">✳</span><span>PromptVerse<span class="brand-ai"> AI</span></span></a><span>Made for imagination, powered by curiosity.</span><a href="#explore">Back to top ↑</a></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite">Prompt copied!</div>
+  <script src="script.js"></script>
+</body>
+</html>
