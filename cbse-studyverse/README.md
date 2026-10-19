@@ -26,3 +26,8 @@ If it does not load, confirm Pages is deployed from branch `main` and folder `/(
 
 ## Save notes as PDF
 Open a lesson, choose **Save / print PDF**, then select **Save as PDF** in the browser's print dialog.
+
+
+## Official Chapter Finder
+
+Open `textbooks.html` from the published StudyVerse site to browse Classes 1–12 subject links to official NCERT textbook selections, ePathshala learning resources, the CBSE 2026–27 curriculum, and official Class X/XII sample papers. The page links to official resources instead of copying or rehosting copyrighted textbook chapters. Subject availability and chapter coverage should be verified against each school's prescribed books.
